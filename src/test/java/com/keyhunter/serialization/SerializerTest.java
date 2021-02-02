@@ -8,7 +8,7 @@ import com.keyhunter.test.serialization.bean.SimpleObject;
 import com.keyhunter.test.serialization.json.FastJSONSerializer;
 import com.keyhunter.test.serialization.json.JackJSONSerializer;
 import com.keyhunter.test.serialization.kryo.KryoSerializer;
-import com.keyhunter.test.serialization.protobuffer.ProtoBufferSerializer;
+import com.keyhunter.test.serialization.protobuffer.ProtoStuffSerializer;
 import com.keyhunter.test.serialization.xml.XMLSerializer;
 import org.junit.Assert;
 import org.junit.Test;
@@ -29,7 +29,7 @@ public class SerializerTest {
         serializers.add(new JdkSerializer());
         serializers.add(new FastJSONSerializer());
         serializers.add(new JackJSONSerializer());
-        serializers.add(new ProtoBufferSerializer());
+        serializers.add(new ProtoStuffSerializer());
         serializers.add(new XMLSerializer());
         SimpleObject simpleObject = buildSimpleObject();
         for (Serializer serializer : serializers) {

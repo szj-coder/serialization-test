@@ -1,0 +1,21 @@
+//protobuf的版本
+syntax = "proto2";
+
+// 生成类的包路径
+option java_package = "com.keyhunter.test.serialization.proto";
+//生成的数据访问类的类名
+option java_outer_classname = "Simple";
+
+message SimpleObject {
+  optional string name = 1;
+  optional string value = 2;
+  optional int32 age = 3;
+  optional string mail = 4;
+  optional double score = 5;
+  optional double height = 6;
+  optional double weight = 7;
+  optional string school = 8;
+  optional string teacher = 9;
+  repeated string parents = 10;
+  optional string desc = 11;
+}
